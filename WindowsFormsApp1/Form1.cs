@@ -22,7 +22,6 @@ namespace WindowsFormsApp1
         {
             loc = textBox1.Text;
             listBox2.Items.Clear();
-            //Nothing
             switch (comboBox3.SelectedIndex)
             {
                 case 0:
@@ -119,7 +118,7 @@ namespace WindowsFormsApp1
                     {
                         case 2:
                         {
-                            var pls = PlaylistIOFactory.GetInstance().GetPlaylistIO(loc+"RFCURI.b4s", PlaylistFormat.LocationFormatting.RFC_URI);
+                            var pls = PlaylistIOFactory.GetInstance().GetPlaylistIO(loc+"RFCURI.b4s", PlaylistFormat.LocationFormatting.RFC_URI,PlaylistFormat.FileEncoding.UTF8_NO_BOM);
                             IList<string> pathsToWrite = new List<string>();
                             foreach (var item in listBox1.Items)
                             {
